@@ -1,0 +1,30 @@
+{{> header}}
+
+<div class="container mt-3">
+    <h4 class="text-center">All Customer Data</h4>
+    <table class="table table-striped mt-4">
+        <thead>
+            <tr>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">mobile Number</th>
+                <th scope="col">City</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each list}}
+            <tr>
+                <td scope="row">{{this.fullname}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.mobile}}</td>
+                <td>{{this.city}}</td>
+                <td><a href="/{{this._id}}" class="badge badge-info pl-2 pr-2">Edit</a></td>
+                <td><a href="/{{this._id}}" class="badge badge-danger pl-2 pr-2">Delete</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

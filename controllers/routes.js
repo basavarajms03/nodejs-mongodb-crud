@@ -44,7 +44,19 @@ router.post('/add_employee_details', (req, res) => {
 
 router.get('/all-customers-info', (req, res) => {
     Employee.find( (err, docs) => {
-        console.log(docs);
+        res.render('all_customer', {
+            title : 'All customer Information',
+            list : docs 
+        });
+    });
+});
+
+
+router.get('/:id', (req, res) => {
+    Employee.findById(req.params.id, (err, doc) => {
+        res.render('index', {
+            employee : doc
+        });
     });
 });
 

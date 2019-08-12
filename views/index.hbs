@@ -1,24 +1,28 @@
 {{> header}}
+
+{{successInfo}}
+{{list}}
+
 <form action="/add_employee_details" method="post" class="container offset-md-3 col-md-6 mt-5" autocomplete="off">
 <div class="form-group">
   <label for="fname">First Name</label>
   <input type="text"
-    class="form-control" name="fname" id="fname" aria-describedby="helpId" placeholder="Enter First Name">
+    class="form-control" name="fname" id="fname" aria-describedby="helpId" placeholder="Enter First Name" value={{employee.fullname}}>
 </div>
 <div class="form-group">
   <label for="email">Email</label>
   <input type="email"
-    class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Enter Email ID">
+    class="form-control" name="email" id="email" aria-describedby="helpId" placeholder="Enter Email ID" value={{employee.email}}>
 </div>
 <div class="form-group">
   <label for="number">Mobile</label>
   <input type="number"
-    class="form-control" name="number" id="number" aria-describedby="helpId" placeholder="Enter your Mobile Number">
+    class="form-control" name="number" id="number" aria-describedby="helpId" placeholder="Enter your Mobile Number" value={{employee.mobile}}>
 </div>
 <div class="form-group">
   <label for="city">City</label>
   <input type="text"
-    class="form-control" name="city" id="city" aria-describedby="helpId" placeholder="Enter City">
+    class="form-control" name="city" id="city" aria-describedby="helpId" placeholder="Enter City" value={{employee.city}}>
 </div>
 <button type="submit" class="btn btn-info btn-block">Submit Data</button>
 </form>
