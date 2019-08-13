@@ -1,9 +1,9 @@
 {{> header}}
 
 {{successInfo}}
-{{list}}
 
 <form action="/add_employee_details" method="post" class="container offset-md-3 col-md-6 mt-5" autocomplete="off">
+<input type="hidden" name="id" value="{{employee.id}}">
 <div class="form-group">
   <label for="fname">First Name</label>
   <input type="text"
